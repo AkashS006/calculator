@@ -29,6 +29,7 @@
     padding: 10px;
     margin-bottom: 10px;
     text-align: right;
+    box-sizing: border-box; /* Include padding and border in width calculation */
   }
   .calculator .button-row {
     display: flex;
@@ -40,6 +41,10 @@
     width: calc(25% - 10px); /* Adjusted button width */
     height: 60px;
     margin: 5px;
+  }
+  .calculator .center-button {
+    display: flex;
+    justify-content: center;
   }
 
 </style>
@@ -72,8 +77,8 @@
     <button onclick="calculate()">=</button>
     <button onclick="appendToDisplay('/')">/</button>
   </div>
-  <div class="button-row">
-    <button onclick="clearDisplay()">C</button>
+  <div class="button-row center-button">
+    <button class="center-button" onclick="clearDisplay()">C</button>
   </div>
 </div>
 
