@@ -3,52 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculator Page</title>
+<title>Simple Calculator</title>
 <style>
   body {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background-color: lightSkyBlue;
-    font-family: Arial, sans-serif;
   }
   .calculator {
-    margin: 20px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
   }
-  .calculator button {
-    font-size: 24px;
-    width: 60px;
-    height: 60px;
-    margin: 5px;
-  }
-  #display {
-    width: auto;
+  .calculator input {
+    width: calc(100% - 20px); /* Adjusted display size */
     font-size: 24px;
     padding: 10px;
     margin-bottom: 10px;
     text-align: right;
   }
- footer {
-    text-align: right;
-    padding: 10px;
-    background-color: white;
-    border-top: 1px solid lightgray;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    font-size: 14px;
+  .calculator button {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
   }
 
 </style>
 </head>
 <body>
 <div class="calculator">
-  <h2>Calculator</h2>
+  <h2>Simple Calculator</h2>
   <input type="text" id="display" readonly>
   <div>
     <button onclick="appendToDisplay('7')">7</button>
@@ -70,9 +61,12 @@
   </div>
   <div>
     <button onclick="appendToDisplay('0')">0</button>
-    <button onclick="clearDisplay()">C</button>
+    <button onclick="appendToDisplay('.')">.</button>
     <button onclick="calculate()">=</button>
     <button onclick="appendToDisplay('/')">/</button>
+  </div>
+  <div>
+    <button onclick="clearDisplay()">C</button>
   </div>
 </div>
 
@@ -93,9 +87,5 @@
     }
   }
 </script>
- 
-<footer>
-    <p>Created by AKASH S (Roll No: 20BEE006)</p>
-</footer>
 </body>
 </html>
