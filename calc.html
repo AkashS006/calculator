@@ -10,14 +10,19 @@
     padding: 0;
     background-color: lightSkyBlue;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
   .calculator {
-    margin: 20px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 80%;
+    max-width: 400px;
   }
   .calculator button {
     font-size: 24px;
@@ -37,13 +42,12 @@
     padding: 10px;
     background-color: white;
     border-top: 1px solid lightgray;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: auto;
     font-size: 14px;
   }
-
 </style>
 </head>
 <body>
