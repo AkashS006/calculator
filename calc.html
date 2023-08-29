@@ -20,17 +20,24 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 80%;
+    max-width: 400px;
   }
   .calculator input {
-    width: calc(100% - 20px); /* Adjusted display size */
+    width: 100%;
     font-size: 24px;
     padding: 10px;
     margin-bottom: 10px;
     text-align: right;
   }
+  .calculator .button-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   .calculator button {
     font-size: 20px;
-    width: 60px;
+    width: calc(25% - 10px); /* Adjusted button width */
     height: 60px;
     margin: 5px;
   }
@@ -41,31 +48,31 @@
 <div class="calculator">
   <h2>Simple Calculator</h2>
   <input type="text" id="display" readonly>
-  <div>
+  <div class="button-row">
     <button onclick="appendToDisplay('7')">7</button>
     <button onclick="appendToDisplay('8')">8</button>
     <button onclick="appendToDisplay('9')">9</button>
     <button onclick="appendToDisplay('+')">+</button>
   </div>
-  <div>
+  <div class="button-row">
     <button onclick="appendToDisplay('4')">4</button>
     <button onclick="appendToDisplay('5')">5</button>
     <button onclick="appendToDisplay('6')">6</button>
     <button onclick="appendToDisplay('-')">-</button>
   </div>
-  <div>
+  <div class="button-row">
     <button onclick="appendToDisplay('1')">1</button>
     <button onclick="appendToDisplay('2')">2</button>
     <button onclick="appendToDisplay('3')">3</button>
     <button onclick="appendToDisplay('*')">*</button>
   </div>
-  <div>
+  <div class="button-row">
     <button onclick="appendToDisplay('0')">0</button>
     <button onclick="appendToDisplay('.')">.</button>
     <button onclick="calculate()">=</button>
     <button onclick="appendToDisplay('/')">/</button>
   </div>
-  <div>
+  <div class="button-row">
     <button onclick="clearDisplay()">C</button>
   </div>
 </div>
