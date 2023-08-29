@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page with Animated Buttons</title>
+    <title>Your Page with Responsive Buttons</title>
     <style>
         body {
             margin: 0;
+            background-color: lightskyblue;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             min-height: 100vh;
-            background-color: lightskyblue;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .content {
@@ -20,13 +27,16 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 100%;
+            max-width: 400px;
         }
 
         .button {
+            display: block;
             background-color: white;
             border: 2px solid black;
             padding: 10px 20px;
-            margin: 5px;
+            margin: 5px auto;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none; 
@@ -41,23 +51,21 @@
         }
 
         footer {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            text-align: right;
+            text-align: center;
             padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <a href="calc.html"<button class="button">CALCULATOR</button></a>
-        <a href="sciCal.html"<button class="button">SCI-CALCULATOR</button></a>
-        <a href="gradecalc.html"<button class="button">GRADE CALCULATOR</button></a>
+    <div class="container">
+        <div class="content">
+            <a href="calc.html" class="button">CALCULATOR</a>
+            <a href="sciCal.html" class="button">SCI-CALCULATOR</a>
+            <a href="gradecalc.html" class="button">GRADE CALCULATOR</a>
+        </div>
+        <footer>
+            <p>Created by AKASH S (Roll No: 20BEE006)</p>
+        </footer>
     </div>
-    
-    <footer>
-        <p>Created by AKASH S (Roll No: 20BEE006)</p>
-    </footer>
 </body>
 </html>
